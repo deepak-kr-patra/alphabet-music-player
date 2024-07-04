@@ -1,0 +1,166 @@
+.playing-text,
+.paused-text {
+    position: relative;
+    background: #222;
+    width: 180px;
+    padding: 1rem;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.paused-text {
+    width: 100%;
+}
+
+.playing-text::before,
+.playing-text::after,
+.paused-text::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    width: max-content;
+    height: 100%;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.playing-text::before,
+.playing-text::after {
+    content: attr(song-name);
+}
+
+.paused-text::after {
+    content: attr(paused-song-name);
+    padding: 0;
+}
+
+.playing-text::before {
+    animation: run 14s linear infinite;
+}
+
+.playing-text::after {
+    animation: run2 14s linear infinite;
+}
+
+@keyframes run {
+
+    0%,
+    50%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25%,
+    75% {
+        transform: translateX(-100%);
+    }
+
+    25.01%,
+    75.01% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes run2 {
+
+    0%,
+    50.01% {
+        transform: translateX(100%);
+    }
+
+    25%,
+    75% {
+        transform: translateX(0);
+    }
+
+    50%,
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.playing-bars .bar {
+    display: inline-block;
+    position: relative;
+    margin-right: 1px;
+    width: 10px;
+    height: 1px;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #ff9500, #ff5e3a);
+    color: transparent;
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.paused-bars .bar {
+    animation-iteration-count: 0;
+}
+
+.n1 {
+    animation-delay: 0.5s;
+}
+
+.n2 {
+    animation-delay: 0.2s;
+}
+
+.n3 {
+    animation-delay: 1.2s;
+}
+
+.n4 {
+    animation-delay: 0.9s;
+}
+
+.n5 {
+    animation-delay: 2.3s;
+}
+
+.n6 {
+    animation-delay: 1.3s;
+}
+
+.n7 {
+    animation-delay: 3.1s;
+}
+
+.n8 {
+    animation-delay: 1.9s;
+}
+
+@keyframes pulse {
+    0% {
+        height: 1px;
+        margin-top: 0;
+    }
+
+    10% {
+        height: 40px;
+        margin-top: -40px;
+    }
+
+    50% {
+        height: 20px;
+        margin-top: -20px;
+    }
+
+    60% {
+        height: 30px;
+        margin-top: -30px;
+    }
+
+    80% {
+        height: 60px;
+        margin-top: -60px;
+    }
+
+    100% {
+        height: 1px;
+        margin-top: 0;
+    }
+}
