@@ -22,7 +22,6 @@
     min-width: 100%;
     width: max-content;
     height: 100%;
-    padding: 0 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,7 +34,6 @@
 
 .paused-text::after {
     content: attr(paused-song-name);
-    padding: 0;
 }
 
 .playing-text::before {
