@@ -130,10 +130,18 @@ const run = (e) => {
         return;
     }
     else if (e.key == "ArrowUp") {
+        if (music.volume >= 1) {
+            console.log("already full volume: ", music.volume);
+            return;
+        }
         music.volume += 0.1;
         return;
     }
     else if (e.key == "ArrowDown") {
+        if (music.volume < 0.1) {
+            console.log("already zero volume: ", music.volume);
+            return;
+        }
         music.volume -= 0.1;
         return;
     }
