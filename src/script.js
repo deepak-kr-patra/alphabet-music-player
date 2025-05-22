@@ -28,7 +28,7 @@ const run = (e) => {
         songname = "Ek Mulaqat";
     }
     else if (e.key == "f" || e.key == "F") {
-        music.src = "https://audio.jukehost.co.uk/zsOlHGGGk7XGppP3llKMwJRl31IN9o3B";
+        music.src = "https://audio.jukehost.co.uk/0wr8rJKyGNsgIno4v2CCm1LXEqzILqm4";
         songname = "Filhall";
     }
     else if (e.key == "g" || e.key == "G") {
