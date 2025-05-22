@@ -28,8 +28,8 @@ const run = (e) => {
         songname = "Ek Mulaqat";
     }
     else if (e.key == "f" || e.key == "F") {
-        music.src = "../music-folder/.mp3";
-        songname = "https://audio.jukehost.co.uk/zsOlHGGGk7XGppP3llKMwJRl31IN9o3B";
+        music.src = "https://audio.jukehost.co.uk/zsOlHGGGk7XGppP3llKMwJRl31IN9o3B";
+        songname = "Filhall";
     }
     else if (e.key == "g" || e.key == "G") {
         music.src = "https://audio.jukehost.co.uk/VD1Zf3xvWCurbDueKrpnecy0qp8k33gk";
